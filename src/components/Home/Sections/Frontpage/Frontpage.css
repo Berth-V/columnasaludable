@@ -1,0 +1,81 @@
+/* ===== CONTENEDOR GENERAL ===== */
+.frontpage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* controla altura */
+  background: linear-gradient(135deg, #4fc3d0, #2b8fa6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ===== CONTENIDO ===== */
+.frontpage__content {
+  z-index: 2;
+  max-width: 960px;
+  padding: 2rem 1.5rem 6rem;
+  /* deja espacio para la ola */
+  text-align: center;
+}
+
+/* ===== FOTO ===== */
+.frontpage__photo {
+  width: 220px;
+  height: 300px;
+  margin: 0 auto 2rem;
+
+  border-radius: 50% / 45%;
+  overflow: hidden;
+
+  border: 5px solid #ffffff;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.frontpage__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== TEXTO ===== */
+.frontpage h1 {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 1.3rem;
+}
+
+.frontpage p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #e6f3f6;
+}
+
+/* ===== OLA ===== */
+.frontpage__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  z-index: 1;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+  .frontpage__photo {
+    width: 280px;
+    height: 380px;
+  }
+
+  .frontpage h1 {
+    font-size: 2.2rem;
+  }
+
+  .frontpage p {
+    font-size: 1.05rem;
+  }
+}
