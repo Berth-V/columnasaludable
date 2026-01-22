@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Loader from './components/Loader/Loader';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 
 function App() {
@@ -15,8 +16,12 @@ function App() {
 
   return (
     <>
+      <Header />
       <Loader isLoading={loading} />
-      {!loading && <Home />}
+      {!loading &&
+        <Home />
+      }
+
     </>
   );
 }
