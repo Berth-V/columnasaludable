@@ -63,3 +63,48 @@ body {
   --btn-ghost-border: rgba(148, 163, 184, 0.24);
   --btn-ghost-text: var(--text);
 }
+
+/* ==================================================
+   ALT THEME → Midnight Teal Clinic
+   Actívalo con: <html data-theme="teal">
+   ================================================== */
+
+html[data-theme="teal"] {
+  /* ===== BASE ===== */
+  --bg: #0b1f23;
+  /* fondo principal */
+  --surface: #122e33;
+  /* panels */
+  --surface-2: #173b41;
+  /* cards */
+  --border: rgba(167, 207, 212, 0.22);
+
+  /* ===== TEXT ===== */
+  --text: #f1fafa;
+  --text-2: #a7cfd4;
+  --muted: rgba(167, 207, 212, 0.70);
+
+  /* ===== ACCENT ===== */
+  --accent: #2ec4b6;
+  /* teal médico */
+  --accent-2: #1fb2a6;
+  /* hover */
+  --accent-soft: rgba(46, 196, 182, 0.18);
+
+  /* ===== EFFECTS ===== */
+  --shadow: 0 18px 34px rgba(0, 0, 0, 0.45);
+  --radius: 18px;
+
+  /* ===== HERO / BACKGROUNDS ===== */
+  --hero-1: #0b1f23;
+  --hero-2: #122e33;
+
+  /* ===== BUTTONS ===== */
+  --btn-primary-bg: var(--accent);
+  --btn-primary-text: #04211f;
+  --btn-primary-hover: var(--accent-2);
+
+  --btn-ghost-bg: rgba(167, 207, 212, 0.10);
+  --btn-ghost-border: rgba(167, 207, 212, 0.24);
+  --btn-ghost-text: var(--text);
+}
