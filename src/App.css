@@ -1,7 +1,12 @@
+/* =========================
+   Global Reset + Theme Tokens
+   ========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -9,4 +14,52 @@ body {
   font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ==================================================
+   DEFAULT THEME → SCHEME 2 (Dark Slate Clinic)
+   ================================================== */
+
+:root {
+  /* ===== BASE ===== */
+  --bg: #0f172a;
+  /* background principal */
+  --surface: #1e293b;
+  /* panels / secciones */
+  --surface-2: #273449;
+  /* cards / botones secundarios */
+  --border: rgba(148, 163, 184, 0.22);
+
+  /* ===== TEXT ===== */
+  --text: #f8fafc;
+  --text-2: #94a3b8;
+  --muted: rgba(148, 163, 184, 0.70);
+
+  /* ===== ACCENT ===== */
+  --accent: #38bdf8;
+  /* CTA principal */
+  --accent-2: #0ea5e9;
+  /* hover / focus */
+  --accent-soft: rgba(56, 189, 248, 0.16);
+
+  /* ===== EFFECTS ===== */
+  --shadow: 0 18px 34px rgba(0, 0, 0, 0.45);
+  --radius: 18px;
+
+  /* ===== HERO / BACKGROUNDS ===== */
+  --hero-1: #0f172a;
+  --hero-2: #1e293b;
+
+  /* ===== BUTTONS ===== */
+  --btn-primary-bg: var(--accent);
+  --btn-primary-text: #071019;
+  /* texto oscuro sobre accent */
+  --btn-primary-hover: var(--accent-2);
+
+  --btn-ghost-bg: rgba(148, 163, 184, 0.10);
+  --btn-ghost-border: rgba(148, 163, 184, 0.24);
+  --btn-ghost-text: var(--text);
 }

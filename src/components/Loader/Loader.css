@@ -6,8 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    will-change: transform;
+    padding: 32px;
 }
 
 .loader__stage {
@@ -15,8 +14,47 @@
     transform-style: preserve-3d;
 }
 
+/* 🔥 LOGO: tamaño ORIGINAL por defecto */
 .loader__img {
     display: block;
+    height: auto;
     will-change: transform, opacity;
-    /* tamaño original del logo */
+
+    /* 👇 CLAVE */
+    width: auto;
+    /* usa el tamaño natural del logo */
+    max-width: none;
+    /* no lo limites en pantallas grandes */
+}
+
+/* ⚠️ SOLO cuando el viewport ya no da */
+@media (max-width: 1024px) {
+    .loader__img {
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .loader__img {
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loader__img {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 360px) {
+    .loader__img {
+        max-width: 220px;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .loader__img {
+        will-change: auto;
+    }
 }

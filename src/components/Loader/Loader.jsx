@@ -1,8 +1,8 @@
 import './Loader.css';
 import { motion } from 'motion/react';
-import LoaderLogo from '../../assets/loader logo.png';
+import LoaderLogo from '../../assets/entradalogo.png';
 
-const SPIN_TIME = 0.7;      // 2 giros
+const SPIN_TIME = 1;      // 2 giros
 const CURTAIN_TIME = 0.3;   // salida telón
 
 function Loader({ isLoading }) {

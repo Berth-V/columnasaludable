@@ -1,0 +1,198 @@
+/* ==============================
+   ServicesDetails (Scheme 2 - Dark)
+   ============================== */
+
+.serviceDetail {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 2rem;
+    min-height: 80vh;
+    color: var(--text);
+}
+
+/* Header */
+.serviceDetail__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Botón volver */
+.serviceDetail__backBtn {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.serviceDetail__backBtn:hover {
+    text-decoration: underline;
+}
+
+/* Breadcrumbs (tu JSX usa __crumbs) */
+.serviceDetail__crumbs {
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.serviceDetail__crumbs a {
+    color: color-mix(in srgb, var(--accent) 90%, white 10%);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.serviceDetail__crumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Layout 2 columnas */
+.serviceDetail__layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 1rem;
+}
+
+/* Aside */
+.serviceDetail__aside {
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.serviceDetail__asideTitle {
+    margin: 0 0 0.9rem 0;
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--text);
+}
+
+/* Lista de pills (quita bullets) */
+.serviceDetail__asideList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+}
+
+/* Botones pill */
+.serviceDetail__pill {
+    width: 100%;
+    text-align: left;
+    border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--surface-2) 92%, transparent);
+    color: var(--text-2);
+    padding: 0.65rem 0.8rem;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease,
+        background-color 0.15s ease, color 0.15s ease;
+}
+
+.serviceDetail__pill:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42);
+    color: var(--text);
+}
+
+.serviceDetail__pill.is-active {
+    border-color: color-mix(in srgb, var(--accent) 70%, var(--border));
+    background: color-mix(in srgb, var(--accent-soft) 50%, var(--surface-2));
+    color: var(--text);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Main + Panel */
+.serviceDetail__main {
+    min-width: 0;
+}
+
+.serviceDetail__panel {
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 2px);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+/* Topbar */
+.serviceDetail__topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.serviceDetail__injuryTitle {
+    margin: 0;
+    font-size: 1.65rem;
+    font-weight: 950;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+/* Description (tu JSX usa __injuryDesc) */
+.serviceDetail__injuryDesc {
+    margin: 0.75rem 0 1.25rem 0;
+    line-height: 1.65;
+    color: var(--text-2);
+    font-size: 1.05rem;
+}
+
+/* Treatment */
+.serviceDetail__treatment {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.serviceDetail__treatmentTitle {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    font-weight: 950;
+    letter-spacing: -0.01em;
+    color: var(--text);
+}
+
+/* Lista de tratamiento (tu JSX usa __list y __item) */
+.serviceDetail__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+}
+
+.serviceDetail__item {
+    background: color-mix(in srgb, var(--accent-soft) 40%, var(--surface));
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+    border-radius: 14px;
+    padding: 0.85rem 0.95rem;
+    line-height: 1.55;
+    color: var(--text-2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .serviceDetail__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceDetail {
+        padding: 1.25rem;
+    }
+}

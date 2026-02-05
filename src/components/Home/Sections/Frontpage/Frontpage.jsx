@@ -1,39 +1,40 @@
-import './Frontpage.css';
-import doctorImg from '../../../../assets/doctor.webp';
+import "./Frontpage.css";
+import doctorImg from "../../../../assets/doctor.jpeg";
 
 function Frontpage() {
   return (
-    <section className="frontpage">
+    <section className="frontpage" id="top">
       <div className="frontpage__content">
         <div className="frontpage__photo">
-          <img src={doctorImg} alt="Doctor especialista" />
+          <img src={doctorImg} alt="Especialista de la clínica" />
         </div>
 
         <h1>
-          Clínica de Fisioterapia, Rehabilitación <br />
-          y Medicina Regenerativa
+          Tratamiento médico especializado para columna cervical, torácica y lumbar.
         </h1>
 
         <p>
-          Somos una clínica especializada en fisioterapia, rehabilitación y
-          medicina regenerativa, ubicados en Tijuana, Baja California.
-          Integramos atención médica profesional, tecnología moderna y un
-          enfoque humano para mejorar la movilidad, reducir el dolor y
-          recuperar la calidad de vida.
+          Atención profesional enfocada en el manejo del dolor de columna mediante
+          tratamientos médicos, bloqueos y medicina regenerativa, apoyados por
+          fisioterapia integral cuando el caso lo requiere.
         </p>
-      </div>
 
-      {/* OLA REAL */}
-      <svg
-        className="frontpage__wave"
-        viewBox="0 0 1440 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,40 C240,120 480,0 720,20 960,40 1200,100 1440,60 L1440,120 L0,120 Z"
-          fill="#ffffff"
-        />
-      </svg>
+        <div className="frontpage__actions">
+          <a
+            className="frontpage__btn frontpage__btn--primary"
+            href="#contact"
+          >
+            Agendar valoración
+          </a>
+
+          <a
+            className="frontpage__btn frontpage__btn--ghost"
+            href="#location"
+          >
+            Cómo llegar
+          </a>
+        </div>
+      </div>
     </section>
   );
 }

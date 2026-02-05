@@ -1,37 +1,45 @@
-/* ===== CONTENEDOR GENERAL ===== */
+/* =========================
+   Frontpage (Scheme 2)
+   ========================= */
+
 .frontpage {
-  position: relative;
   width: 100%;
   min-height: 100vh;
-  /* controla altura */
-  background: linear-gradient(135deg, #4fc3d0, #2b8fa6);
+  background:
+    radial-gradient(900px 500px at 50% 15%,
+      var(--accent-soft),
+      transparent 60%),
+    var(--bg);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-/* ===== CONTENIDO ===== */
+/* Panel principal */
 .frontpage__content {
-  z-index: 2;
+  margin-top: 4rem;
   max-width: 960px;
-  padding: 2rem 1.5rem 6rem;
-  /* deja espacio para la ola */
+  padding: 4.5rem 1.5rem;
   text-align: center;
+  background: color-mix(in srgb, var(--surface) 22%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  border-radius: calc(var(--radius) + 10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
 }
 
-/* ===== FOTO ===== */
+/* Foto */
 .frontpage__photo {
   width: 220px;
   height: 300px;
   margin: 0 auto 2rem;
-
   border-radius: 50% / 45%;
   overflow: hidden;
-
-  border: 5px solid #ffffff;
-  background: #ffffff;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 6px;
 }
 
 .frontpage__photo img {
@@ -40,43 +48,105 @@
   object-fit: cover;
 }
 
-/* ===== TEXTO ===== */
+/* Texto */
 .frontpage h1 {
-  font-size: 1.6rem;
-  line-height: 1.3;
-  color: #ffffff;
-  margin-bottom: 1.3rem;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
 .frontpage p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #e6f3f6;
-  margin-bottom: 50px
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.65;
+  margin: 0 auto 2rem;
+  max-width: 62ch;
+  color: var(--text-2);
 }
 
-/* ===== OLA ===== */
-.frontpage__wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 140px;
-  z-index: 1;
+/* Acciones */
+.frontpage__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* ===== DESKTOP ===== */
+/* =========================
+   BOTONES
+   ========================= */
+
+.frontpage__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 190px;
+  padding: 1rem 1.35rem;
+  border-radius: var(--radius);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.frontpage__btn:hover {
+  transform: translateY(-2px);
+}
+
+.frontpage__btn:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   CTA PRINCIPAL (ACCENT SÓLIDO)
+   ========================= */
+
+.frontpage__btn--primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, transparent);
+
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.frontpage__btn--primary:hover {
+  background: var(--btn-primary-hover);
+  border-color: color-mix(in srgb, var(--accent) 85%, transparent);
+  box-shadow:
+    0 20px 44px rgba(0, 0, 0, 0.42);
+}
+
+/* =========================
+   CTA SECUNDARIO (GHOST)
+   ========================= */
+
+.frontpage__btn--ghost {
+  background: var(--btn-ghost-bg);
+  color: var(--btn-ghost-text);
+  border: 1px solid var(--btn-ghost-border);
+
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.frontpage__btn--ghost:hover {
+  border-color: color-mix(in srgb, var(--accent) 70%, transparent);
+  background: color-mix(in srgb, var(--accent-soft) 55%, transparent);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* Responsive */
 @media (min-width: 768px) {
   .frontpage__photo {
     width: 280px;
     height: 380px;
-  }
-
-  .frontpage h1 {
-    font-size: 2.2rem;
-  }
-
-  .frontpage p {
-    font-size: 1.05rem;
   }
 }

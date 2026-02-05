@@ -1,0 +1,64 @@
+.sports {
+    width: 100%;
+    padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem);
+    background: var(--bg);
+}
+
+.sports__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(1.5rem, 5vw, 3rem);
+    align-items: center;
+}
+
+.sports__image {
+    width: 100%;
+    min-height: 400px;
+    border-radius: 22px;
+
+    background-image: url('/src/assets/sportmed.jpg');
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid var(--border);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
+}
+
+/* ✅ Panel para el texto (para que se vea premium y legible) */
+.sports__content {
+    background: color-mix(in srgb, var(--surface) 86%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+    border-radius: 22px;
+    padding: clamp(1.2rem, 3vw, 1.8rem);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.sports__title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.sports__text {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--text-2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .sports__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .sports__image {
+        order: -1;
+        min-height: 230px;
+    }
+}
