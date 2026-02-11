@@ -20,7 +20,7 @@
 
 .careProcess__step {
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent-2);
     border-radius: 22px;
     padding: 2rem 1.5rem;
     text-align: left;

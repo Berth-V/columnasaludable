@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import partsData from '../data/partsData_es.json';
-import servicesData from '../../../../Services/data/servicesData.es';
+import servicesData from '../../../../Services/data/servicesData.es.js';
 import { useSkeletonContext } from '../context/useSkeletonContext';
 import {
   opacityAnimation,
@@ -14,11 +14,6 @@ export default function SkeletonManager() {
 
   const activePart = partsData.find((p) => p.name === selectedPart);
   const inactiveParts = partsData.filter((p) => p.name !== selectedPart);
-
-  // Map to id Route Link
-  const titleToIdMap = Object.fromEntries(
-    Object.entries(servicesData).map(([id, part]) => [part.title, id])
-  );
 
   return (
     <AnimatePresence initial={false}>
@@ -106,7 +101,11 @@ export default function SkeletonManager() {
               ? active.textPaths
               : [];
 
-            const linkId = titleToIdMap[activePart.name]; // Dinamic id Routes
+            // ✅ NEW: use stable key from partsData (added serviceKey)
+            const linkId = activePart?.serviceKey;
+
+            // ✅ Optional safety: verify it exists in servicesData
+            const safeLinkId = linkId && servicesData[linkId] ? linkId : null;
 
             return (
               <>
@@ -125,8 +124,8 @@ export default function SkeletonManager() {
 
                 {/* Dinamic Routes to Services */}
                 {/* See All Btn */}
-                {linkId && (
-                  <Link to={`/services/${linkId}`}>
+                {safeLinkId && (
+                  <Link to={`/services/${safeLinkId}`}>
                     <motion.g
                       id="See All Btn"
                       variants={opacityAnimation}
@@ -135,18 +134,18 @@ export default function SkeletonManager() {
                     >
                       <rect
                         {...active.seeAllBtn.rectPaths}
-                        fill="#00C4FF"
+                        fill="#d4af37"
                         rx="1"
                         ry="1"
                       />
                       <rect
                         {...active.seeAllBtn.rectPaths}
-                        stroke="#075985"
+                        stroke="#000"
                         strokeWidth={active.seeAllBtn.rectPaths.strokeWidth}
                         rx="1"
                       />
                       {active.seeAllBtn.othersPaths?.map((p) => (
-                        <path key={p.id} id={p.id} d={p.d} fill="white" />
+                        <path key={p.id} id={p.id} d={p.d} fill="black" />
                       ))}
                     </motion.g>
                   </Link>

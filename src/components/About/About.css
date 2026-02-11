@@ -1,42 +1,31 @@
-/* =========================
-   About (Scheme 2 - Solid)
-   Mantiene tus mismas clases
-   ========================= */
-
 .about {
     background: var(--bg);
     color: var(--text);
+    margin-top: 4rem;
 }
 
 /* ===== HERO ===== */
 .about__hero {
     position: relative;
     padding: clamp(3rem, 6vw, 5rem) 1.25rem clamp(2.2rem, 5vw, 3.2rem);
-
-    /* ✅ Fondo sólido, sin gradient */
     background: var(--bg);
     overflow: hidden;
-
-    /* para que se sienta "hero" sin ola */
     border-bottom: 1px solid var(--border);
 }
 
 .about__heroInner {
     max-width: 1100px;
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 2rem;
     align-items: center;
-
     position: relative;
     z-index: 2;
 }
 
 /* Foto */
 .about__photo {
-    margin-top: 6rem;
     width: 280px;
     height: 360px;
     border-radius: 50% / 45%;
@@ -47,7 +36,7 @@
     box-shadow: var(--shadow);
     justify-self: center;
 
-    outline: 2px solid var(--accent-soft);
+    outline: 1px solid var(--accent-2);
     outline-offset: 6px;
 }
 
@@ -87,21 +76,15 @@
     border-radius: 999px;
 
     background: color-mix(in srgb, var(--surface-2) 75%, transparent);
-    border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+    border: 1px solid var(--accent-2);
     color: var(--text);
     font-weight: 700;
     font-size: 0.92rem;
 }
 
-/* ✅ ola DESACTIVADA (por si queda algún svg en JSX) */
-.about__wave {
-    display: none;
-}
-
 /* ===== BODY ===== */
 .about__body {
     padding: clamp(2.5rem, 5vw, 4rem) 1.25rem;
-
     /* ✅ antes era blanco, ahora Scheme 2 */
     background: var(--bg);
 }
@@ -117,7 +100,7 @@
 
 .about__card {
     background: color-mix(in srgb, var(--surface) 92%, transparent);
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent-2);
     border-radius: calc(var(--radius) + 4px);
     padding: 1.8rem 1.5rem;
     box-shadow: var(--shadow);

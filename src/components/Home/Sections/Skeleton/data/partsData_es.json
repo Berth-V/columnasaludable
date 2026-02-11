@@ -551,7 +551,8 @@
           "strokeWidth": 0.8
         }
       }
-    }
+    },
+    "serviceKey": "knee"
   },
   {
     "name": "Lumbar Spine",
@@ -1317,7 +1318,8 @@
           "strokeWidth": 0.295369
         }
       }
-    }
+    },
+    "serviceKey": "lumbarSpine"
   },
   {
     "name": "Shoulder",
@@ -1849,7 +1851,8 @@
           "strokeWidth": 0.5
         }
       }
-    }
+    },
+    "serviceKey": "shoulder"
   },
   {
     "name": "Thoracic Spine",
@@ -2468,7 +2471,8 @@
           "strokeWidth": 0.758843
         }
       }
-    }
+    },
+    "serviceKey": "thoracicSpine"
   },
   {
     "name": "Tibia & Fibula",
@@ -3062,7 +3066,8 @@
           "strokeWidth": 1.5
         }
       }
-    }
+    },
+    "serviceKey": "tibiaFibula"
   },
   {
     "name": "Wrist",
@@ -3616,7 +3621,8 @@
           "strokeWidth": 0.4
         }
       }
-    }
+    },
+    "serviceKey": "wrist"
   },
   {
     "name": "Ankle",
@@ -4290,7 +4296,8 @@
           "strokeWidth": 0.8
         }
       }
-    }
+    },
+    "serviceKey": "ankle"
   },
   {
     "name": "Cervical Spine",
@@ -4679,7 +4686,8 @@
           "strokeWidth": 0.257143
         }
       }
-    }
+    },
+    "serviceKey": "cervicalSpine"
   },
   {
     "name": "Clavicle",
@@ -5188,14 +5196,15 @@
       "backBtn": {
         "arrowD": "M287.889 137.351C287.854 137.387 287.834 137.436 287.834 137.487C287.834 137.538 287.854 137.587 287.889 137.624L289.1 138.851C289.136 138.887 289.184 138.907 289.235 138.907C289.285 138.907 289.334 138.887 289.37 138.851C289.405 138.815 289.425 138.765 289.425 138.714C289.425 138.663 289.405 138.614 289.37 138.578L288.293 137.487L289.37 136.396C289.389 136.378 289.405 136.357 289.415 136.333C289.426 136.309 289.432 136.283 289.433 136.257C289.434 136.231 289.429 136.205 289.419 136.18C289.41 136.156 289.395 136.134 289.377 136.115C289.359 136.097 289.337 136.082 289.313 136.072C289.288 136.063 289.263 136.058 289.237 136.059C289.211 136.06 289.185 136.066 289.162 136.077C289.138 136.088 289.117 136.104 289.1 136.124L287.889 137.351ZM290.562 137.295H288.023V137.68H290.562V137.295Z",
         "circle": {
-          "cx": 289,
+          "cx": 289.3,
           "cy": 137.571855,
           "r": 2.442855,
           "stroke": "white",
           "strokeWidth": 0.257143
         }
       }
-    }
+    },
+    "serviceKey": "clavicle"
   },
   {
     "name": "Elbow",
@@ -5693,7 +5702,8 @@
           "strokeWidth": 0.6
         }
       }
-    }
+    },
+    "serviceKey": "elbow"
   },
   {
     "name": "Femur",
@@ -6171,7 +6181,8 @@
           "strokeWidth": 1
         }
       }
-    }
+    },
+    "serviceKey": "femur"
   },
   {
     "name": "Foot",
@@ -6757,7 +6768,8 @@
           "strokeWidth": 0.9
         }
       }
-    }
+    },
+    "serviceKey": "foot"
   },
   {
     "name": "Forearm",
@@ -7359,7 +7371,8 @@
           "strokeWidth": 0.8
         }
       }
-    }
+    },
+    "serviceKey": "forearm"
   },
   {
     "name": "Hand",
@@ -7865,7 +7878,8 @@
           "strokeWidth": 0.6
         }
       }
-    }
+    },
+    "serviceKey": "hand"
   },
   {
     "name": "Hip",
@@ -8431,7 +8445,8 @@
           "strokeWidth": 0.5
         }
       }
-    }
+    },
+    "serviceKey": "hip"
   },
   {
     "name": "Humerus",
@@ -9083,6 +9098,7 @@
           "strokeWidth": 1
         }
       }
-    }
+    },
+    "serviceKey": "humerus"
   }
 ]

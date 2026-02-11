@@ -20,46 +20,48 @@ body {
 }
 
 /* ==================================================
-   DEFAULT THEME → SCHEME 2 (Dark Slate Clinic)
+   ALT THEME → Black Gold Clinic
    ================================================== */
 
-:root {
+html[data-theme="black-gold"] {
   /* ===== BASE ===== */
-  --bg: #0f172a;
-  /* background principal */
-  --surface: #1e293b;
-  /* panels / secciones */
-  --surface-2: #273449;
-  /* cards / botones secundarios */
-  --border: rgba(148, 163, 184, 0.22);
+  --bg: #070708;
+  /* negro real */
+  --surface: #111114;
+  /* negro elevado */
+  --surface-2: #1a1a1f;
+  /* cards */
+  --border: rgba(210, 210, 220, 0.18);
 
   /* ===== TEXT ===== */
-  --text: #f8fafc;
-  --text-2: #94a3b8;
-  --muted: rgba(148, 163, 184, 0.70);
+  --text: #f5f5f5;
+  /* blanco suave */
+  --text-2: #b8b8c0;
+  /* plateado */
+  --muted: rgba(184, 184, 192, 0.65);
 
   /* ===== ACCENT ===== */
-  --accent: #38bdf8;
-  /* CTA principal */
-  --accent-2: #0ea5e9;
-  /* hover / focus */
-  --accent-soft: rgba(56, 189, 248, 0.16);
+  --accent: #d4af37;
+  /* dorado médico */
+  --accent-2: #c9a227;
+  /* hover */
+  --accent-soft: rgba(212, 175, 55, 0.18);
 
   /* ===== EFFECTS ===== */
-  --shadow: 0 18px 34px rgba(0, 0, 0, 0.45);
+  --shadow: 0 22px 48px rgba(0, 0, 0, 0.65);
   --radius: 18px;
 
   /* ===== HERO / BACKGROUNDS ===== */
-  --hero-1: #0f172a;
-  --hero-2: #1e293b;
+  --hero-1: #070708;
+  --hero-2: #111114;
 
   /* ===== BUTTONS ===== */
   --btn-primary-bg: var(--accent);
-  --btn-primary-text: #071019;
-  /* texto oscuro sobre accent */
+  --btn-primary-text: #1a1403;
+  /* texto oscuro, elegante */
   --btn-primary-hover: var(--accent-2);
 
-  --btn-ghost-bg: rgba(148, 163, 184, 0.10);
-  --btn-ghost-border: rgba(148, 163, 184, 0.24);
+  --btn-ghost-bg: rgba(255, 255, 255, 0.06);
+  --btn-ghost-border: rgba(212, 175, 55, 0.35);
   --btn-ghost-text: var(--text);
 }
