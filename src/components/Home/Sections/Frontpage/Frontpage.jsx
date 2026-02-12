@@ -1,5 +1,6 @@
 import "./Frontpage.css";
 import doctorImg from "../../../../assets/doctor.jpeg";
+import { Link } from "react-router-dom";
 
 function Frontpage() {
   return (
@@ -20,19 +21,19 @@ function Frontpage() {
         </p>
 
         <div className="frontpage__actions">
-          <a
+          <Link
+            to="/contact"
             className="frontpage__btn frontpage__btn--primary"
-            href="#contact"
           >
             Agendar valoración
-          </a>
+          </Link>
 
-          <a
+          <Link
+            to="/services"
             className="frontpage__btn frontpage__btn--ghost"
-            href="#location"
           >
-            Cómo llegar
-          </a>
+            Conoce más
+          </Link>
         </div>
       </div>
     </section>
